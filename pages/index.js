@@ -8,12 +8,19 @@ import { MicrophoneIcon, ViewGridIcon } from '@heroicons/react/solid';
 import { SearchIcon } from '@heroicons/react/outline';
 import Footer from '../components/Footer';
 import { useRef } from 'react';
+import { useRouter } from 'next/router';
 
 export default function Home() {
+	const router = useRouter;
 	const searchInputRef = useRef(null);
 
 	const search = (e) => {
 		e.preventDefault();
+		const term = searchInputRef.current.value;
+
+		if (!term) return;
+
+		router.push(`/search?term=${term}`);
 	};
 
 	return (
