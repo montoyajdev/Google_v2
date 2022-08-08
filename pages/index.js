@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import Image from 'next/image';
+import { useRouter } from 'next/router';
 import Avatar from '../components/avatar';
 import model_img from '../images/model.jpeg';
 import google_img from '../images/google2.png';
@@ -8,10 +9,9 @@ import { MicrophoneIcon, ViewGridIcon } from '@heroicons/react/solid';
 import { SearchIcon } from '@heroicons/react/outline';
 import Footer from '../components/Footer';
 import { useRef } from 'react';
-import { useRouter } from 'next/router';
 
 export default function Home() {
-	const router = useRouter;
+	const router = useRouter();
 	const searchInputRef = useRef(null);
 
 	const search = (e) => {
