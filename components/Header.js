@@ -6,6 +6,7 @@ import { XIcon } from '@heroicons/react/outline';
 import { MicrophoneIcon, SearchIcon } from '@heroicons/react/solid';
 import Avatar from './avatar';
 import model_img from '../images/model.jpeg';
+import HeaderOptions from './HeaderOptions';
 
 function Header() {
 	const router = useRouter();
@@ -62,6 +63,8 @@ function Header() {
 					height={30}
 				/>
 			</div>
+			{/*HeaderOptions*/}
+			<HeaderOptions />
 		</header>
 	);
 }
